@@ -28,6 +28,14 @@ public class BehaviorParameterization {
 
     System.out.println("The number of 'small' boxes = " + smallBoxes.size());
 
+    List<Box> mediumBoxes = Box.filterBoxes(inventory, new BoxPredicate(){
+      public boolean test(Box b){
+        return (b.getLength() > 100 && b.getLength() < 500) ||
+            (b.getWidth() > 100 && b.getWidth() < 500);
+      }
+    });
+
+    System.out.println("The number of 'medium' boxes = " + mediumBoxes.size());
   }
 
 }

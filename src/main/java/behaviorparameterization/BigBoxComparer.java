@@ -5,7 +5,7 @@ package behaviorparameterization;
  */
 public class BigBoxComparer implements BoxPredicate {
 
-  public boolean test(Box box){
-    return box.getLength() > 100 && box.getWidth() > 100;
+  public boolean test(Box box) {
+    return box.getLength() > 500 && box.getWidth() > 500;
   }
 }
